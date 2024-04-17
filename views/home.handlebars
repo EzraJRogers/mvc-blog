@@ -1,0 +1,17 @@
+<div>
+    <div class="addEvent">
+      <a class="neon" href="/form">Add Event +</a>
+    </div>
+</div>
+
+<div class="center card-align">
+  {{#each user.events}}
+    <div class="card rotate-hor-center ">
+      <p>Event Name: {{event_name}}</p>
+      <p>Artist Name: {{artist_name}}</p>
+      <p>Event Time: {{event_time}}</p>
+      <p>Stage Time: {{stage_time}}</p>
+      <p>Description: {{description}}</p>
+    </div>
+  {{/each}}
+</div>
