@@ -7,34 +7,28 @@
   <title>User Registry</title>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
 
-<body>
-  <header class="display-flex justify-space-between align-center p-2">
-    <h1>
-      <a class="neon" href="/">STAGED</a>
-    </h1>
 
+<body>
+  <header>
+    <div>
+      <h1>Pixel Post</h1>
     <nav>
-      {{#if logged_in}}
-      <a class="neon" id="logout" href="/">Logout</a>
-      {{else}}
-      <a class="neon" id="login" href="/login">Login</a> <span class="neon">|</span> <a class="neon" id="signup" href="/signup">Sign-Up</a>
-      {{/if}}
+      <a href="/">Home</a>
+      <a href="/dashboard">Dashboard</a>
+      <a href="/login">Login</a>
+      <a id="logout" href="/logout">Logout</a>
     </nav>
 
+    </div>
   </header>
-  <main class="container container-fluid mt-5">
+
+  <main>
     {{{ body }}}
   </main>
-  <footer>
-        <h2>TERMS OF USE</h2>
-        <h2>MANAGE COOKIE PREFERENCES</h2>
-        <h2>CONTACT</h2>
-        <h2>© 2024 ASU BOOTCAMP</h2>
-    </footer>
 
   {{#if logged_in}}
   <script src="/js/logout.js"></script>

@@ -1,6 +1,6 @@
-const { Event } = require('../models');
+const { Blog } = require('../models');
 
-const eventdata = [
+const blogData = [
   {
     id: 1,
     event_name: 'edc',
@@ -12,6 +12,6 @@ const eventdata = [
   },
 ];
 
-const seedEvents = () => Event.bulkCreate(eventdata);
+const seedBlog = () => Blog.bulkCreate(blogData);
 
-module.exports = seedEvents;
+module.exports = seedBlog;

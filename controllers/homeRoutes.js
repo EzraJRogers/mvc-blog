@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User,Event } = require('../models');
+const { User,Blog } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, async (req, res) => {
@@ -11,7 +11,7 @@ router.get('/', withAuth, async (req, res) => {
       },
       include: [
         {
-          model: Event,
+          model: Blog,
         },
       ],
     });
@@ -40,9 +40,8 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
-router.get('/form', withAuth, (req, res) => {
-  res.render('form', {logged_in: req.session.logged_in});
+router.get('/dashboard', withAuth, (req, res) => {
+  res.render('dashboard', {logged_in: req.session.logged_in});
 });
-
 
 module.exports = router;
