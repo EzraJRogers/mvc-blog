@@ -1,4 +1,4 @@
-
+![App Screenshot](images/image.png)
 # MVC Blog
 
 ## Description
