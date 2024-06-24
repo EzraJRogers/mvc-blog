@@ -1,0 +1,8 @@
+[functions]
+  external_node_modules = ["express","bcrypt,connect-session-sequelize", "dotenv", "express-session", "express-handlebars", "mysql2", "sequelize", "express-session", "serverless-http"]
+  node_bundler = "esbuild"
+[[redirects]]
+  force = true
+  from = "/api/*"
+  status = 200
+  to = "/.netlify/functions/api/:splat"
